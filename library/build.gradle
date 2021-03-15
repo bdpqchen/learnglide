@@ -16,7 +16,7 @@ repositories {
 dependencies {
     compile files('libs/disklrucache-2.0.2.jar')
     compile 'com.android.support:support-v4:13.0.+'
-    compile files('libs/volley.jar')
+    implementation group: 'com.android.volley', name: 'volley', version: '1.0.0'
 }
 
 android {
@@ -34,5 +34,8 @@ android {
             manifest.srcFile 'AndroidManifest.xml'
 
         }
+    }
+    defaultConfig {
+        minSdkVersion 8
     }
 }
